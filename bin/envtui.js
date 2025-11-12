@@ -27,8 +27,22 @@ if (!hasBun) {
 // Run with Bun
 const child = spawn("bun", ["run", indexPath, ...process.argv.slice(2)], {
   stdio: "inherit",
+  shell: false,
 });
 
-child.on("exit", (code) => {
-  process.exit(code || 0);
+child.on("exit", (code, signal) => {
+  if (signal) {
+    process.kill(process.pid, signal);
+  } else {
+    process.exit(code || 0);
+  }
 });
+
+child.on("error", (err) => {
+  console.error("\n❌ Error running envtui:", err.message);
+  process.exit(1);
+});
+
+// Forward signals to child process
+process.on("SIGINT", () => child.kill("SIGINT"));
+process.on("SIGTERM", () => child.kill("SIGTERM"));
