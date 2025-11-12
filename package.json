@@ -1,6 +1,6 @@
 {
   "name": "@yoyo-org/envtui-config",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Interactive TUI for managing environment variables across multiple .env files with config-driven dynamic forms",
   "keywords": [
     "env",

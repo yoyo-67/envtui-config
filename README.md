@@ -10,11 +10,11 @@
 # 1. Install Bun (one-time):
 curl -fsSL https://bun.sh/install | bash
 
-# 2. Run with bunx or npx:
+# 2. Run with bunx (recommended):
 bunx @yoyo-org/envtui-config ./env-config.ts
-# or (npx will ask for confirmation, use -y to skip)
-npx -y @yoyo-org/envtui-config ./env-config.ts
 ```
+
+> **Note:** Use `bunx` for best experience. While `npx` is supported, it may have issues with interactive terminal features.
 
 ---
 
@@ -116,13 +116,10 @@ npx @yoyo-org/envtui-config ./env-config.ts
 
 **Requires [Bun](https://bun.sh)** - Install with: `curl -fsSL https://bun.sh/install | bash`
 
-No package installation needed! Works with both `npx` and `bunx`:
+**Recommended:** Use `bunx` (no package installation needed):
 ```bash
-npx -y @yoyo-org/envtui-config ./env-config.ts
-# or
 bunx @yoyo-org/envtui-config ./env-config.ts
 ```
-Note: npx will ask "(y)" confirmation on first run - use `-y` flag to auto-confirm
 
 Or add to your project:
 ```bash
@@ -133,7 +130,7 @@ Add to package.json:
 ```json
 {
   "scripts": {
-    "env": "envtui ./env-config.ts"
+    "env": "bunx @yoyo-org/envtui-config ./env-config.ts"
   }
 }
 ```
