@@ -12,8 +12,8 @@ curl -fsSL https://bun.sh/install | bash
 
 # 2. Run with bunx or npx:
 bunx @yoyo-org/envtui-config ./env-config.ts
-# or
-npx @yoyo-org/envtui-config ./env-config.ts
+# or (npx will ask for confirmation, use -y to skip)
+npx -y @yoyo-org/envtui-config ./env-config.ts
 ```
 
 ---
@@ -118,10 +118,11 @@ npx @yoyo-org/envtui-config ./env-config.ts
 
 No package installation needed! Works with both `npx` and `bunx`:
 ```bash
-npx @yoyo-org/envtui-config ./env-config.ts
+npx -y @yoyo-org/envtui-config ./env-config.ts
 # or
 bunx @yoyo-org/envtui-config ./env-config.ts
 ```
+Note: npx will ask "(y)" confirmation on first run - use `-y` flag to auto-confirm
 
 Or add to your project:
 ```bash
