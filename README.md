@@ -5,7 +5,11 @@
 
 **Interactive TUI for managing environment variables across multiple .env files**
 
-⚡ **Quick Start:** `npx @yoyo-org/envtui-config ./env-config.ts`
+⚡ **Quick Start:**
+```bash
+# Requires Bun (install once): curl -fsSL https://bun.sh/install | bash
+bunx @yoyo-org/envtui-config ./env-config.ts
+```
 
 ---
 
@@ -105,23 +109,23 @@ npx @yoyo-org/envtui-config ./env-config.ts
 
 ## Installation
 
-**No installation needed!** Use npx:
+**Requires [Bun](https://bun.sh)** - Install with: `curl -fsSL https://bun.sh/install | bash`
+
+No package installation needed! Use `bunx`:
 ```bash
-npx @yoyo-org/envtui-config ./env-config.ts
+bunx @yoyo-org/envtui-config ./env-config.ts
 ```
 
-Or install in your project:
+Or add to your project:
 ```bash
-npm install -D @yoyo-org/envtui-config
-# or
 bun add -d @yoyo-org/envtui-config
 ```
 
-Add to package.json scripts:
+Add to package.json:
 ```json
 {
   "scripts": {
-    "env": "envtui ./env-config.ts"
+    "env": "bunx @yoyo-org/envtui-config ./env-config.ts"
   }
 }
 ```
@@ -186,7 +190,7 @@ Use `{LOCAL_IP}` for mobile development:
 
 ## Requirements
 
-- Node.js >= 18.0.0
+- **Bun >= 1.0.0** ([Install](https://bun.sh): `curl -fsSL https://bun.sh/install | bash`)
 
 ## License
 
