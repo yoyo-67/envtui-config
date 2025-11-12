@@ -1,0 +1,49 @@
+# Source files (only ship dist/)
+*.ts
+!*.d.ts
+
+# Tests
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+__tests__/
+test/
+tests/
+vitest.config.ts
+tsup.config.ts
+
+# Development files
+node_modules/
+.vscode/
+.idea/
+*.log
+*.lock
+bun.lockb
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Documentation (keep README.md)
+docs/
+
+# Editor
+.DS_Store
+.env
+.env.local
+.env.*.local
+
+# Coverage
+coverage/
+.nyc_output/
+*.lcov

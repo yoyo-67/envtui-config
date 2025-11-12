@@ -1,0 +1,86 @@
+{
+  "name": "@envtui/config",
+  "version": "1.0.0",
+  "description": "Interactive TUI for managing environment variables across multiple .env files with config-driven dynamic forms",
+  "keywords": [
+    "env",
+    "environment",
+    "config",
+    "tui",
+    "terminal",
+    "dotenv",
+    "cli",
+    "interactive",
+    "environment-variables",
+    "configuration",
+    "development-tools"
+  ],
+  "author": "yoyo67",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoyo-67/envtui-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yoyo-67/envtui-config/issues"
+  },
+  "homepage": "https://github.com/yoyo-67/envtui-config#readme",
+  "bin": {
+    "envtui": "./index.tsx"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "require": "./dist/types.js",
+      "import": "./dist/types.mjs"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "require": "./dist/types.js",
+      "import": "./dist/types.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "index.tsx",
+    "config-types.ts",
+    "config-loader.ts",
+    "env-utils.ts",
+    "types.ts",
+    "config.example.json",
+    "config.example.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "scripts": {
+    "start": "bun run index.tsx",
+    "build": "tsup",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "prepublishOnly": "bun run test:run"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^24.10.1",
+    "@vitest/ui": "^2.1.8",
+    "tsup": "^8.5.0",
+    "typescript": "^5.0.0",
+    "vitest": "^2.1.8"
+  },
+  "peerDependencies": {
+    "bun": ">=1.0.0"
+  },
+  "dependencies": {
+    "@opentui/core": "^0.1.41",
+    "@opentui/react": "^0.1.41",
+    "react": "^19.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
