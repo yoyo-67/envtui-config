@@ -1,6 +1,6 @@
 {
   "name": "@yoyo-org/envtui-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Interactive TUI for managing environment variables across multiple .env files with config-driven dynamic forms",
   "keywords": [
     "env",
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/yoyo-67/envtui-config#readme",
   "bin": {
-    "envtui": "./index.tsx"
+    "envtui": "./bin/envtui.js"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -44,6 +44,7 @@
     }
   },
   "files": [
+    "bin",
     "dist",
     "index.tsx",
     "config-types.ts",

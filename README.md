@@ -7,8 +7,13 @@
 
 ⚡ **Quick Start:**
 ```bash
-# Requires Bun (install once): curl -fsSL https://bun.sh/install | bash
+# 1. Install Bun (one-time):
+curl -fsSL https://bun.sh/install | bash
+
+# 2. Run with bunx or npx:
 bunx @yoyo-org/envtui-config ./env-config.ts
+# or
+npx @yoyo-org/envtui-config ./env-config.ts
 ```
 
 ---
@@ -111,8 +116,10 @@ npx @yoyo-org/envtui-config ./env-config.ts
 
 **Requires [Bun](https://bun.sh)** - Install with: `curl -fsSL https://bun.sh/install | bash`
 
-No package installation needed! Use `bunx`:
+No package installation needed! Works with both `npx` and `bunx`:
 ```bash
+npx @yoyo-org/envtui-config ./env-config.ts
+# or
 bunx @yoyo-org/envtui-config ./env-config.ts
 ```
 
@@ -125,7 +132,7 @@ Add to package.json:
 ```json
 {
   "scripts": {
-    "env": "bunx @yoyo-org/envtui-config ./env-config.ts"
+    "env": "envtui ./env-config.ts"
   }
 }
 ```
