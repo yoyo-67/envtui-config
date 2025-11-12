@@ -1,11 +1,11 @@
-# @envtui/config
+# @yoyo-org/envtui-config
 
-[![npm version](https://badge.fury.io/js/@envtui%2Fconfig.svg)](https://www.npmjs.com/package/@envtui/config)
+[![npm version](https://badge.fury.io/js/@envtui%2Fconfig.svg)](https://www.npmjs.com/package/@yoyo-org/envtui-config)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Interactive TUI for managing environment variables across multiple .env files with config-driven dynamic forms**
 
-⚡ **Quick Start:** `npx @envtui/config ./env-config.ts`
+⚡ **Quick Start:** `npx @yoyo-org/envtui-config ./env-config.ts`
 
 ## Why This Package?
 
@@ -19,7 +19,7 @@ Managing environment variables across multiple .env files in monorepos and micro
 - **Human Error**: Typos in URLs, forgotten variables, mismatched values
 
 ### The Solution:
-`@envtui/config` provides an interactive terminal UI that:
+`@yoyo-org/envtui-config` provides an interactive terminal UI that:
 - ✅ Updates multiple .env files simultaneously
 - ✅ Groups related variables (e.g., all API domain variables)
 - ✅ Provides preset options for common configurations
@@ -55,7 +55,7 @@ Managing environment variables across multiple .env files in monorepos and micro
 
 1. **Create a config file** `env-config.ts`:
    ```typescript
-   import type { EnvConfig } from '@envtui/config/types';
+   import type { EnvConfig } from '@yoyo-org/envtui-config/types';
 
    export default {
      envFiles: ['./app/.env', './api/.env'],  // Your .env files
@@ -73,7 +73,7 @@ Managing environment variables across multiple .env files in monorepos and micro
 
 2. **Run it:**
    ```bash
-   npx @envtui/config ./env-config.ts
+   npx @yoyo-org/envtui-config ./env-config.ts
    ```
 
 3. **Done!** Select an option and your .env files are updated.
@@ -96,16 +96,16 @@ Managing environment variables across multiple .env files in monorepos and micro
 
 ```bash
 # Using npm
-npm install -D @envtui/config
+npm install -D @yoyo-org/envtui-config
 
 # Using bun
-bun add -d @envtui/config
+bun add -d @yoyo-org/envtui-config
 
 # Using yarn
-yarn add -D @envtui/config
+yarn add -D @yoyo-org/envtui-config
 
 # Using pnpm
-pnpm add -D @envtui/config
+pnpm add -D @yoyo-org/envtui-config
 ```
 
 ## Detailed Setup
@@ -119,7 +119,7 @@ Choose TypeScript (recommended) or JSON:
 
 ```typescript
 // env-config.ts
-import type { EnvConfig } from '@envtui/config/types';
+import type { EnvConfig } from '@yoyo-org/envtui-config/types';
 
 const config: EnvConfig = {
   envFiles: [
@@ -170,12 +170,12 @@ export default config;
 
 **Option 1: npx (no install needed):**
 ```bash
-npx @envtui/config ./env-config.ts
+npx @yoyo-org/envtui-config ./env-config.ts
 ```
 
 **Option 2: Install globally:**
 ```bash
-npm install -g @envtui/config
+npm install -g @yoyo-org/envtui-config
 envtui ./env-config.ts
 ```
 
@@ -274,7 +274,7 @@ Only update variables that exist in each file:
 ## Project Structure
 
 ```
-@envtui/config/
+@yoyo-org/envtui-config/
 ├── index.tsx           # Main CLI entry point
 ├── types.ts            # Public API exports
 ├── config-types.ts     # Type definitions
@@ -290,7 +290,7 @@ Only update variables that exist in each file:
 Full TypeScript support with autocomplete:
 
 ```typescript
-import type { EnvConfig, VariableGroup, SelectOption } from '@envtui/config/types';
+import type { EnvConfig, VariableGroup, SelectOption } from '@yoyo-org/envtui-config/types';
 
 // Get full autocomplete and type checking
 const config: EnvConfig = {
@@ -348,11 +348,11 @@ options: [...presetEnvironments]
 
 ```bash
 # Run directly without installation
-npx @envtui/config <config-file-path>
+npx @yoyo-org/envtui-config <config-file-path>
 
 # Examples
-npx @envtui/config ./env-config.ts
-npx @envtui/config ./env-config.json
+npx @yoyo-org/envtui-config ./env-config.ts
+npx @yoyo-org/envtui-config ./env-config.json
 ```
 
 **Using installed bin:**
@@ -366,7 +366,7 @@ npx envtui ./env-config.ts
 **Using bun:**
 
 ```bash
-bun run @envtui/config <config-file-path>
+bun run @yoyo-org/envtui-config <config-file-path>
 ```
 
 **Supported config formats:** `.ts`, `.js`, `.mjs`, `.json`
@@ -374,7 +374,7 @@ bun run @envtui/config <config-file-path>
 ### Programmatic Usage
 
 ```typescript
-import { loadConfig, validateConfig } from '@envtui/config/types';
+import { loadConfig, validateConfig } from '@yoyo-org/envtui-config/types';
 
 const config = await loadConfig('./config.ts');
 validateConfig(config);
